@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Car Lot</title>
+  <!-- Custom styles for this template -->
+  <link href="./navbar.css" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">CarMart</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="model.html">Models</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Price</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <!-- Carousel -->
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/honda.jpg" alt="Honda Guide" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="images/audi.jpg" alt="Audi Guide" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="images/ford.jpg" alt="Ford Guide" class="d-block w-100">
+          </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      <br>
+      <div id="price-result" class="display-none">
+        <table class="pricing">
+          <tr>
+            <td>Car Cost:</td>
+            <td id="price-value" class="price"></td>
+          </tr>
+          <tr>
+            <td>Taxes and fees:</td>
+            <td id="taxes-value" class="price"></td>
+          </tr>
+          <tr>
+            <td>Total Cost:</td>
+            <td id="total-value" class="price"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br>
+    <div class="flex-shrink-0">
+      <div class="container">
+        <h2>Purchase for best price</h2>
+        <h3>Our Cost Plan</h3>
+        <form>
+          <div class="container mt-3">
+              <label for="carBrand" class="form-label">Car Brand</label>
+              <input class="form-control" list="carBrands" name="carBrand" id="carBrand">
+              <datalist id="carBrands">
+              <option>Honda</option>
+              <option>Ford</option>
+              <option>Audi</option>
+              </datalist>    
+              <div class="error display-none" id="car-error">Select Car Brand</div>
+          </div>
+          <div class="container mt-3">
+            <label for="carType" class="form-label">Car Model</label>
+            <input class="form-control" list="carTypes" name="carType" id="carType">
+            <datalist id="carTypes">
+              <option>Sedan</option>
+              <option>Hatchback</option>
+              <option>SUV</option>
+            </datalist>
+            <div class="error display-none" id="type-error">Select Car Type</div>
+          </div><br>
+          <small class="text-muted">By clicking NewCar or UsedCar only shows price</small><br>
+          <label for="newCar">NewCar</label>
+          <input type="checkbox" id="newCar" name="newCar" value="new">
+          <label for="usedCar">UsedCar</label>
+          <input type="checkbox" id="usedCar" name="usedCar" value="used">
+          <div id="price-button">Calculate Cost</div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">Copyright &copy; 2018 CarMart<br>
+        <a href="mailto:vk00019@my.westga.edu">vk00019@my.westga.edu</a></span>
+    </div>
+  </footer>
+  
+  <script src="./validation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+/* Custom page CSS
+-------------------------------------------------- */
+
+main>.container {
+    padding: 60px 15px 0;
+}
+
+span {
+    content: "\2713";
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.personaldetails {
+    color: d;
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.display-none {
+    display: none;
+}
+
+table.pricing {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+table.pricing .price {
+    text-align: right;
+}
+
+table.pricing tr:last-child {
+    border-top: thin solid;
+}
+
+.display-none {
+    display: none;
+}
+
+#price-result {
+    border: solid;
+    padding: 1em;
+    width: 50%;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=checkbox] {
+    margin-top: 12pt;
+    margin-right: 25pt;
+    margin-left: 0;
+    text-align: left;
+    width: auto;
+}
+
+.error {
+    color: red;
+}
+
+#price-button {
+    width: 100%;
+    font-size: 1em;
+    color: #666666;
+    background-color: #EEEEEE;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-align: center;
+}
